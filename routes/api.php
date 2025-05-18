@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ScoreController;
-use Illuminate\Support\Facades\Auth;
 
 // Public routes
 Route::post('/send-otp', [AuthController::class, 'sendOtp']);
