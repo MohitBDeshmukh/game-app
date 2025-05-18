@@ -1,0 +1,60 @@
+# ============================================
+
+## INTERVIEW TASK
+
+# ============================================
+
+# 🎮 Laravel Game App API
+
+A Laravel 12 backend project for OTP-based user registration and game scoring with JWT authentication.
+
+## 🚀 Features
+
+-   OTP verification for mobile number (hardcoded to 1234)
+-   User registration with phone, name, email, DOB
+-   JWT-based authentication
+-   Score submission (3/day limit, range 50–500)
+-   Overall and weekly score + ranking
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MohitBDeshmukh/game-app.git
+cd game-app
+```
+
+# Install Dependencies(if required)
+
+composer install
+composer require tymon/jwt-auth
+
+# Setup .env and Update database info in .env
+
+cp .env.example .env
+
+# Database Script
+
+/databaseScript/game_app.sql
+
+# Generate App Key & JWT Secret
+
+php artisan key:generate
+php artisan jwt:secret
+
+# Run Migrations and Seeders
+
+php artisan migrate
+
+# Start Server
+
+php artisan serve
+
+# 🔐 Authentication (Use JWT token in header:)
+
+Authorization: Bearer <your_token>
+
+# 📮 Postman Collection
+
+/PostmanCollection/GameApp.postman_collection.json
