@@ -65,6 +65,6 @@ php artisan serve
 
 Authorization: Bearer <your_token>
 
-# 📮 Import Shared Postman Collection into Postamn
+# 📮 Import Shared Postman Collection into Postman
 
 game-app.postman_collection.json
