@@ -67,4 +67,4 @@ Authorization: Bearer <your_token>
 
 # 📮 Import Shared Postman Collection into Postamn
 
-game-app.postman_collection
+game-app.postman_collection.json
