@@ -27,12 +27,16 @@ cd game-app
 
 # Install Dependencies(if required)
 
+```bash
 composer install
 composer require tymon/jwt-auth
+```
 
 # Setup .env and Update database info in .env
 
+```bash
 cp .env.example .env
+```
 
 # Database Script
 
@@ -40,16 +44,22 @@ cp .env.example .env
 
 # Generate App Key & JWT Secret
 
+```bash
 php artisan key:generate
 php artisan jwt:secret
+```
 
 # Run Migrations and Seeders
 
+```bash
 php artisan migrate
+```
 
 # Start Server
 
+```bash
 php artisan serve
+```
 
 # 🔐 Authentication (Use JWT token in header:)
 
