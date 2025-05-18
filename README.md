@@ -38,9 +38,9 @@ composer require tymon/jwt-auth
 cp .env.example .env
 ```
 
-# Database Script
+# Shared Database Script
 
-/databaseScript/game_app.sql
+game_app.sql
 
 # Generate App Key & JWT Secret
 
@@ -65,6 +65,6 @@ php artisan serve
 
 Authorization: Bearer <your_token>
 
-# 📮 Postman Collection
+# 📮 Import Shared Postman Collection into Postamn
 
-/PostmanCollection/GameApp.postman_collection.json
+game-app.postman_collection
