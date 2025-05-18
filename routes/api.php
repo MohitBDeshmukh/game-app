@@ -11,9 +11,6 @@ Route::post('/register', [AuthController::class, 'register']);
 
 // Protected routes
 Route::middleware(['jwt.verify'])->group(function () {
-    Route::get('/user-profile', function () {
-        return response()->json(auth()->user());
-    });
     Route::post('/save-score', [ScoreController::class, 'store']);
     Route::get('/overall-score', [ScoreController::class, 'overallScore']);
     Route::get('/weekly-score', [ScoreController::class, 'weeklyScore']);
