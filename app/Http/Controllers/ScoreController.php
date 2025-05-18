@@ -7,14 +7,21 @@ use App\Models\Score;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class ScoreController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'score' => 'required|integer|between:50,500',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors(),
+            ], 400);
+        }
 
         $user = Auth::user();
         $todayCount = Score::where('user_id', $user->id)
